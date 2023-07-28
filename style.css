@@ -1,0 +1,276 @@
+*{/* ОБОВЯЗКОВО НА КОЖНОМУ ПРОЕКТІ */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    background:linear-gradient(to right top,#1fff01 ,#0f6be4,#f6fa0c);
+    background-size: cover;
+    animation: backgroud 8s linear alternate infinite;
+}
+@keyframes backgroud{
+    0%{
+        background:linear-gradient(to right top,#1fff01 ,#0f6be4,#f6fa0c);
+    }
+    50%{
+        background:linear-gradient(to right top,#ea01ff ,#e40f2b,#0cfaab);
+    }
+    100%{
+        background:linear-gradient(to bottom top,#01ff73 ,#2f0fe4,#f79503);
+    }
+}
+.header {
+    
+}
+.header__body {
+    background:linear-gradient(to right top, #fa0cda,#1d0fe4,#9901ff);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header__logo {
+    width: 70px;
+    height: 70px;
+    transition: 1.3s;
+    cursor: pointer;
+}
+.header__logo:hover{
+    transform: rotatey(180deg);
+}
+.header__mobail {
+    display: none;
+}
+.header__label {
+    display: none;
+}
+.mobail-line {
+    z-index: 1;
+}
+.header__nav {
+    display: flex;
+    font-size: 22px;
+    padding-left: 0px;
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 30px;
+}
+.header__nav-item {
+    padding-right: 40px;
+    color: darkorange;
+    transition: 0.8s;
+}
+.header__nav-item:hover{
+    transform: translateY(-20px);
+    color: rgb(39, 219, 195);
+}
+.header__button {
+    width: 120px;
+    height: 50px;
+    background:linear-gradient(to right top,#ff0138,#0f6be4,#0fe46f);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-shadow: 10px 2px 5px #00ffff, 10px 2px 2px #051cee;
+    cursor: pointer;
+    
+}
+.button___iteam{
+    cursor: pointer;
+    transition: 0.6s;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.button___iteam:hover{
+    color: rgb(214, 12, 12);
+    letter-spacing: 3px;
+}
+
+
+
+
+
+    .overflou{
+        width: 500px;
+        height: 500px;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    main{
+        position: relative;
+        
+    }
+    .messeng {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #e40f2b;
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+    }
+    .input__messeng {
+        display: none;
+        
+    }
+    .input__messeng[type="checkbox"]:checked ~ .window{
+        right: 50px;
+        
+    }
+    .label__messeng {
+       
+    }
+    .span-messeng {
+        font-size: 40px;
+        padding: 30px 30px;
+        cursor: pointer;
+        transition: 0.6s;
+        
+    }
+    .span-messeng:hover{
+        transform: translateY(-20px);
+        color: hotpink;
+    }
+    .window {
+        position: absolute;
+        width: 250px;
+        height: 280px;
+        background-color: #f6fa0c9d;
+        backdrop-filter: blur(20px);
+        top: -320px;
+        right: -300px;
+        border-radius: 10px;
+        border: 4px solid #000;
+        
+        padding: 10px;
+        transition: 0.6s;
+    }
+    .window__title {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .window__pidtext {
+        margin-bottom: 10px;
+    }
+    .window__img {
+        margin-left: 50px;
+    }
+
+/* Стилі для дуже малих екранів (дисплей максимум 575рх) */
+    @media (max-width: 575px) { 
+    
+    }
+    /* Стилі для великих екранів (дисплей максимум 1199рх) */
+@media (max-width: 1199px) {
+
+}
+
+/* Стилі для середніх екранів (дисплей максимум 991рх) */
+    @media (max-width: 991px) {
+
+    }
+
+/* Стилі для малих екранів (дисплей максимум 767рх) */
+    @media (max-width: 767px) {
+        .header__nav{
+            display: none;
+        }
+        .header__button{
+            display: none;
+        }
+        .header__label{
+            position: relative;
+            display: block;
+            width: 50px;
+            height: 50px;
+            
+        }
+        .mobail-line{
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            height: 3px;
+            background-color: chartreuse;
+            cursor: pointer;
+        }
+        .mobail-line::after{
+            content: '';
+            top: 15px;
+            position: absolute;
+            background-color: chartreuse;
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+        }
+        .mobail-line::before{
+            content: '';
+            bottom: 15px;
+            position: absolute;
+            background-color: chartreuse;
+            width: 100%;
+            height: 3px;
+            cursor: pointer;
+        }
+        .header__mobail[type="checkbox"]:checked ~ .header__label .mobail-line{
+            transform: rotate(-45deg);
+            
+        }
+        .header__mobail[type="checkbox"]:checked ~ .header__label .mobail-line::after{
+            transform: rotate(0deg);
+            top: 0;
+        }
+        .header__mobail[type="checkbox"]:checked ~ .header__label .mobail-line::before{
+            transform: rotate(90deg);
+            top: 0;
+        }
+        .header__mobail[type="checkbox"]:checked ~ .header__nav{
+            display: block;
+            position: absolute;
+            width: 100%;
+            background: linear-gradient(45deg, red, blue);
+            top: 70px;
+            height: 100%;
+            animation: header__nav 2s linear;
+            z-index: 1;
+        }
+        @keyframes header__nav{
+            0%{
+                transform: translateX(-500px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        .header__nav{
+            font-size: 60px;
+        }
+        .header__nav-item{
+            margin-left: 20px;
+            animation: item 3s linear;
+        }
+        @keyframes item{
+            0%{
+                transform: translateX(-100px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        .header__button{
+            display: none;
+            position: absolute;
+            font-size: 22px;
+            width: 150px;
+            left: 40%;
+        }
+        
+    }
